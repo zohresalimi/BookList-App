@@ -1,0 +1,19 @@
+body {
+    position: relative;
+}
+
+.form-group {
+    position: relative;
+}
+
+.invalid-feedback {
+    display: block !important;
+    position: absolute;
+    left: 0;
+}
+
+.alert {
+    position: fixed;
+    left: 0;
+    bottom: 0
+}

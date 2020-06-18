@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html>
 <!--<![endif]-->
 
 <head>
@@ -12,15 +12,48 @@
     <title>BookList App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-book-open textprimary"></i>
+            My <span class="text-primary">Book</span>List
+        </h1>
+        <form id="book-form">
+            <div class="form-group mb-4">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" data-value='Title'>
+            </div>
+            <div class="form-group mb-4">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form-control" data-value='Author'>
+            </div>
+            <div class="form-group mb-5">
+                <label for="isbn">ISBN#</label>
+                <input type="text" id="isbn" class="form-control" data-value='ISBN#'>
+            </div>
+            <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+        </form>
 
-    <script src="" async defer></script>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN#</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
